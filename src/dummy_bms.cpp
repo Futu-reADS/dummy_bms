@@ -23,7 +23,7 @@ DummyBmsNode::DummyBmsNode()
     soc_value_(2)  // default value for soc_value_
 {
   // Initialize EHMI Publisher
-  battery_rsoc_pub_ = this->create_publisher<UIInt16>("/ui/battery/roc", 10);
+  battery_rsoc_pub_ = this->create_publisher<UIInt16>("/ui/battery/rsoc", 10);
 
   // Initialize the timer
   timer_ = this->create_wall_timer(10000ms, std::bind(&DummyBmsNode::main_loop, this));
